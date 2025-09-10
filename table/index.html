@@ -4,34 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Tables</title>
-    <style>
-        table
-        {
-            width:70%;
-            border-collapse: collapse;
-        }
-        td,th
-        {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 15px;
-        }
-        tr:nth-child(odd) {background-color:blueviolet;}
-        tr:nth-child(even) {background-color: cadetblue;}
-    </style>
-</head>
+    <!-- Sử dụng thuộc tính border của CSS để thêm đường viền vào bảng -->
+<style>
+    table,th,td
+    {
+        /* border: 1px solid black; */
+        /* Thu gọn đường viền thành đường viền duy nhất */
+        border-collapse:collapse;
+        /* bo tròn các góc của viền */
+        border-radius: 10px;
+        /* thiết lập giao diện của đường viền */
+        border-style:inset;
+    }
+    th,td
+    {
+        background-color: rgb(147, 128, 165);
+    }
+</style>
 <body>
-    <table>
-        <tr>    
-            <th>Name</th>
-            <th>Tel</th>
-            <th>Email</th>
+    <!-- Tạo một dữ liệu bảng mẫu gồm họ và tên , lớp và quê quán -->
+    <table style="width:100%">
+        <caption>Danh sách sinh viên CTUT</caption>
+        <!-- Sử dụng thẻ <thead></thead> để nhóm nội dung tiêu đề trong một bảng! -->
+        <thead>
+        <!-- Tạo hàng cho tiêu đề họ và tên, lớp và quê quán -->
+            <tr>
+                <th>Họ và tên</th>
+                <th>Lớp</th>
+                <th>Ngành</th>
+                <th>Năm sinh</th>
+                <th>Quê quán</th>
+            </tr>
+        </thead>
+        <!-- Thêm thông tin cho các cột tương ứng -->
+        <tbody>
+            <tr>
+            <td>Nguyễn Trung Hậu</td>
+            <td>HTTT2311055</td>
+            <td>Hệ thống thông tin</td>
+            <td>19/05/2005</td>
+            <td>TP Cần Thơ</td>
         </tr>
-        <tr>
-            <td>Trung Hậu</td>
-            <td>0768134527</td>
-            <td>nguyentrunghau1952005@gmail.com</td>
-        </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td>Nguyễn Mai Thảo</td>
+                <td>LUAT2411046</td>
+                <td>Luật</td>
+                <td>07/08/2006</td>
+                <td>TP Cần Thơ</td>
+            </tr>
+        </tbody>
     </table>
 </body>
 </html>
